@@ -1,4 +1,9 @@
-var express = require("express");
+const express = require("express");
+const fs = require("fs");
 
-var app = express();
-var PORT = 3000;
+const app = express();
+const PORT = 3000;
+
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
+});
