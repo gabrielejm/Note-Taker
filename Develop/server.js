@@ -14,11 +14,11 @@ app.use(express.json());
 // Routes
 
 app.get("/notes", function (req, res) {
-  res.send();
+  res.sendFile(path.join(__dirname, "notes.html"));
 });
 
 app.get("*", function (req, res) {
-  res.send();
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Listener
