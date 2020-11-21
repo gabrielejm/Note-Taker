@@ -30,6 +30,10 @@ app.post("/api/notes", function (req, res) {
   res.sendFile("db.json");
 });
 
+app.delete("/api/notes/:id", function (req, res) {
+  res.send("db.json");
+});
+
 // Listener
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
