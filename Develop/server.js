@@ -1,7 +1,7 @@
 // Dependencies
 const express = require("express");
 const fs = require("fs");
-const path = path("path");
+// const path = path("path");
 
 // Sets up the Express App
 const app = express();
@@ -19,6 +19,10 @@ app.get("/notes", function (req, res) {
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/api/notes", function (req, res) {
+  return res.json("db.json");
 });
 
 // Listener
