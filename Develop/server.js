@@ -25,6 +25,11 @@ app.get("/api/notes", function (req, res) {
   return res.json("db.json");
 });
 
+//adds new note
+app.post("/api/notes", function (req, res) {
+  res.sendFile("db.json");
+});
+
 // Listener
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
