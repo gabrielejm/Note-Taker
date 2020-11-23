@@ -23,11 +23,12 @@ app.get("/notes", function (req, res) {
 
 // Shows all notes json format
 app.get("/api/notes", function (req, res) {
-  return res.json("db/db.json");
+  return fs.readFile("db/db.json");
 });
 
 // Adds new note
 app.post("/api/notes", function (req, res) {
+  const newNote = req.body;
   res.sendFile("db/db.json");
 });
 
