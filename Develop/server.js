@@ -13,23 +13,25 @@ app.use(express.json());
 
 // Routes
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "notes.html"));
+  res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
+// Shows all notes json format
 app.get("/api/notes", function (req, res) {
   return res.json("db.json");
 });
 
-//adds new note
+// Adds new note
 app.post("/api/notes", function (req, res) {
   res.sendFile("db.json");
 });
 
+// Deletes note
 app.delete("/api/notes/:id", function (req, res) {
   res.send("db.json");
 });
