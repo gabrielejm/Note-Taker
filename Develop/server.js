@@ -23,17 +23,17 @@ app.get("/notes", function (req, res) {
 
 // Shows all notes json format
 app.get("/api/notes", function (req, res) {
-  return res.json("db.json");
+  return res.json("db/db.json");
 });
 
 // Adds new note
 app.post("/api/notes", function (req, res) {
-  res.sendFile("db.json");
+  res.sendFile("db/db.json");
 });
 
 // Deletes note
 app.delete("/api/notes/:id", function (req, res) {
-  res.send("db.json");
+  res.send("db/db.json");
 });
 
 // Listener
