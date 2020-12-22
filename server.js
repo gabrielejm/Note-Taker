@@ -1,10 +1,7 @@
 // Dependencies
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const http = require("http");
-const { v4: uuidv4 } = require("uuid");
-const db = require("./Develop/db/db.json");
+const apiRoutes = require("./routes/api-routes");
+const htmlRoutes = require("./routes/html-routes");
 
 // Sets up the Express App
 const app = express();
@@ -14,36 +11,11 @@ const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const notes = [{}];
+app.use(express.static("public"));
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
 
 // Routes
-
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/Develop/public/index.html"));
-});
-
-app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "/Develop/public/notes.html"));
-});
-
-// Shows all notes json format
-app.get("/api/notes", function (req, res) {
-  return fs.readFile("/Develop/db/db.json");
-});
-
-// Adds new note
-app.post("/api/notes", function (req, res) {
-  const newNote = req.body;
-  uuidv4(newNote);
-  notes.push(newNote);
-  fs.writeFileSync();
-  res.sendFile("/Develop/db/db.json");
-});
-
-// Deletes note
-app.delete("/api/notes/:id", function (req, res) {
-  res.send("/Develop/db/db.json");
-});
 
 // Listener
 app.listen(PORT, function () {
