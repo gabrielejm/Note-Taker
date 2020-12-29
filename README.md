@@ -20,21 +20,14 @@ Write, save, and delete notes!
 ![hwsnip2](https://user-images.githubusercontent.com/63600183/103253789-98850d80-4950-11eb-8f98-f15159bb9049.PNG)
 
 
-### Installation<a name="installation"></a>
-
-
 
 ### Usage<a name="usage"></a>
 
-
+Write a title and body for your note and click the save button. Your note will be saved on the sidebar to the left and remain unless deleted.
 
 ### Contributing<a name="contributing"></a>
 
-
-
-### Tests<a name="tests"></a>
-
-
+Justin Gabriele
 
 ### License<a name="license"></a>
 
