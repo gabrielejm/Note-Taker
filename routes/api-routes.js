@@ -23,7 +23,7 @@ router.post("/notes", function (req, res) {
 router.delete("/notes/:id", function (req, res) {
   const data = fs.readFile("./db/db.json");
   const updatedNotes = data.filter((note) => note.id !== req.params.id);
-  fs.writeFileSync(Updatednotes);
+  fs.writeFileSync(updatedNotes);
   res.json({ ok: true });
 });
 
