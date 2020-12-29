@@ -21,7 +21,9 @@ Write, save, and delete notes!
 
 ### Usage<a name="usage"></a>
 
-Write a title and body for your note and click the save button. Your note will be saved on the sidebar to the left and remain unless deleted.
+Write a title and body for your note and click the save button. Your note will be saved on the sidebar to the left.
+Click the pen icon to start a new note.
+Click the red trashcan icon to delete that note.
 
 ### Contributing<a name="contributing"></a>
 
