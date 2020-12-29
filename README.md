@@ -15,6 +15,11 @@
 
 Write, save, and delete notes!
 
+![hwsnip1](https://user-images.githubusercontent.com/63600183/103253778-8c994b80-4950-11eb-9c0e-36e8eb289463.PNG)
+
+![hwsnip2](https://user-images.githubusercontent.com/63600183/103253789-98850d80-4950-11eb-8f98-f15159bb9049.PNG)
+
+
 ### Installation<a name="installation"></a>
 
 
